@@ -40,13 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOnceSignal.cs" />
-    <Compile Include="IPrioritySignal.cs" />
     <Compile Include="ISignal.cs" />
     <Compile Include="ISlot.cs" />
     <Compile Include="OnceSignal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signal.cs" />
-    <Compile Include="Signalling.cs" />
     <Compile Include="Slot.cs" />
     <Compile Include="SlotList.cs" />
   </ItemGroup>
