@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace SignalFramework
+namespace Signals
 {
     public class Slot<T> : ISlot<T>
     {

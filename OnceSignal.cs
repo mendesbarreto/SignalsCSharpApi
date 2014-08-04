@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-namespace SignalFramework
+namespace Signals
 {
     
     /// <summary>

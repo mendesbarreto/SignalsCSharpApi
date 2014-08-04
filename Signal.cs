@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SignalFramework
+namespace Signals
 {
     public class Signal<T> : OnceSignal<T> , ISignal<T>
     {

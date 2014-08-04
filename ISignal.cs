@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SignalFramework
+namespace Signals
 {
     public interface ISignal<T>
     {
