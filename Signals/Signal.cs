@@ -11,5 +11,9 @@ namespace Signals
             return RegisterListener(listener, false);
         }
 
+        public ISlot<T> Add(OnceSignal<T>.SignalDelegateArgTemplateCallback0 listener)
+        {
+            return RegisterListener(listener, false);
+        }
     }
 }

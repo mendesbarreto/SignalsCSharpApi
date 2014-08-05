@@ -10,7 +10,7 @@ namespace Signals
         protected int m_priority = 0;
 
         protected IOnceSignal<T> m_signal;
-        protected OnceSignal<T>.SignalDelegateArgTemplateCallback1 m_listener;
+        protected Delegate m_listener;
         protected object[] m_params;
 
 
@@ -26,8 +26,8 @@ namespace Signals
         /// <exception cref="ArgumentError"> Given listener is NULL </exception>
         /// <exception cref="Error"> Internal signal reference has not been set yet </exception>
 
-        public static Slot<T> Create( 
-            OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener,
+        public static Slot<T> Create(
+            Delegate listener,
             IOnceSignal<T> signal, 
             bool once = false, 
             int priority = 0)
@@ -45,23 +45,24 @@ namespace Signals
         }
 
 
-        public OnceSignal<T>.SignalDelegateArgTemplateCallback1 Listener()
+
+        public Delegate Listener()
         {
             return m_listener;
         }
 
-        public void Listener( OnceSignal<T>.SignalDelegateArgTemplateCallback1 value)
+        public void Listener( Delegate value)
         {
             if (value == null)
                 throw new ArgumentException("Given listener is null.\nDid you want to set enabled to false instead?");
 
             VerifyListener(value);
-
+            
             m_listener = value;
         }
 
 
-        protected void VerifyListener(OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+        protected void VerifyListener( Delegate listener)
 		{
 			if (null == listener)
 			{
@@ -74,18 +75,20 @@ namespace Signals
 			}
 		}
 
-        public void Execute(object value)
+        public void Execute0()
         {
             if (!m_enabled) return;
             if (m_once) Remove();
 
-            if (m_params != null && m_params.Length > 0)
-            {
-                m_listener.DynamicInvoke(m_params);
-                return;
-            }
+            (m_listener as OnceSignal<T>.SignalDelegateArgTemplateCallback0).Invoke();
+        }
 
-            m_listener.DynamicInvoke(value);
+        public void Execute1(T value)
+        {
+            if (!m_enabled) return;
+            if (m_once) Remove();
+
+            (m_listener as OnceSignal<T>.SignalDelegateArgTemplateCallback1).Invoke(value);
         }
 
         public object[] Params()

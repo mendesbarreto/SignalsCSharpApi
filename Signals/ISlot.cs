@@ -5,8 +5,8 @@ namespace Signals
 {
     public interface ISlot<T>
     {
-        OnceSignal<T>.SignalDelegateArgTemplateCallback1 Listener();
-        void Listener(OnceSignal<T>.SignalDelegateArgTemplateCallback1 value);
+        Delegate Listener();
+        void Listener(Delegate value);
 
         object[] Params();
         void Params(params object[] value);
@@ -25,8 +25,9 @@ namespace Signals
             set;
         }
 
-        void Execute(object value);
-        
+        void Execute0();
+        void Execute1(T value);
+
         void Remove();
     }
 }

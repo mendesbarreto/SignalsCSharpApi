@@ -173,7 +173,7 @@ namespace Signals
         /// Note: assumes the listener is not repeated within the list.
         /// 
         /// </summary>
-        public SlotList<T> FilterNot( OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+        public SlotList<T> FilterNot( Delegate listener)
 		{
 			if (!nonEmpty || listener == null) return this;
 
@@ -207,7 +207,7 @@ namespace Signals
         /// Determines whether the supplied listener Function is contained within this list
         /// 
         /// </summary>
-        public bool Contains( OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+        public bool Contains( Delegate listener)
 		{
 			if (!nonEmpty) return false;
 
@@ -226,7 +226,7 @@ namespace Signals
         /// Retrieves the ISlot associated with a supplied listener within the SlotList.
         /// 
         /// </summary>
-		public ISlot<T> Find( OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+		public ISlot<T> Find( Delegate listener)
 		{
 			if (!nonEmpty) return null;
 

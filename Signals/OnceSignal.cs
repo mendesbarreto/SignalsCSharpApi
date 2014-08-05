@@ -21,7 +21,7 @@ namespace Signals
 
         }
 
-        public void Dispatch(T valueObjects)
+        public void Dispatch( T valueObjects = default(T) )
         {
 			// Broadcast to listeners.
             SlotList<T> slotsToProcess = m_slots;
@@ -30,36 +30,45 @@ namespace Signals
 			{
 				while (slotsToProcess.nonEmpty)
 				{
-					slotsToProcess.head.Execute(valueObjects);
+                    if (valueObjects != null)
+					    slotsToProcess.head.Execute1(valueObjects);
+                    else
+                    {
+                        if (typeof(T) == typeof(NullSignal))
+                            slotsToProcess.head.Execute0();
+                        else
+                            throw new Exception("The function is wainting some object as parameter of type: " + typeof(T).ToString() );
+                    }
+
 					slotsToProcess = slotsToProcess.tail;
 				}
 			}
         }
-
 
         public uint NumListeners
         {
             get { return m_slots.Length();  }
         }
 
-        public ISlot<T> AddOnce( SignalDelegateArgTemplateCallback1 listener)
+        public ISlot<T> AddOnce( Delegate listener)
         {
             return RegisterListener(listener, true);
         }
 
-
-        protected ISlot<T> RegisterListener( SignalDelegateArgTemplateCallback1 listener, bool once = false)
-		{
-			if ( RegistrationPossible(listener, once) )
-			{
+        protected ISlot<T> RegisterListener( Delegate listener, bool once = false)
+        {
+            if (RegistrationPossible(listener, once))
+            {
                 ISlot<T> newSlot = Slot<T>.Create(listener, this, once);
                 m_slots = m_slots.Prepend(newSlot);
-				return newSlot;
-			}
+                return newSlot;
+            }
 
             return m_slots.Find(listener);
-		}
-        protected bool RegistrationPossible(SignalDelegateArgTemplateCallback1 listener, bool once)
+        }
+
+
+        protected bool RegistrationPossible( Delegate listener, bool once)
 		{
 			if (!m_slots.nonEmpty) return true;
 			
@@ -76,7 +85,7 @@ namespace Signals
 		}
 
 
-        public ISlot<T> Remove(SignalDelegateArgTemplateCallback1 listener)
+        public ISlot<T> Remove( Delegate listener)
         {
             ISlot<T> slot = m_slots.Find(listener);
 
