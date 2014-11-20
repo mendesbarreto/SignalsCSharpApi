@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Signals C# : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Signals C#</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mendesbarreto/SignalsCSharpApi">View on GitHub</a>
+
+          <h1 id="project_title">Signals C#</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mendesbarreto/SignalsCSharpApi/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mendesbarreto/SignalsCSharpApi/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="building-page-not-read" class="anchor" href="#building-page-not-read" aria-hidden="true"><span class="octicon octicon-link"></span></a>BUILDING PAGE NOT READ!!!</h1>
+
+<h3>
+<a id="welcome-to-signalscsharpapi-page" class="anchor" href="#welcome-to-signalscsharpapi-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to SignalsCSharpApi page</h3>
+
+<h4>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h4>
+
+<p>SignalsCSharpApi is an open-source C# library witch simplify the messaging between objects and makes it easy to implement the Observer pattern while avoiding boilerplate your code. This library could be used in place of delegate and C# events.</p>
+
+<p>The main idea behind this library is make you code clear and easy to add and remove "listeners" of a object event.</p>
+
+<p>Before we start, I need you have some concepts in your mind such as:</p>
+
+<ul>
+<li>Signal is a dispatcher of a single event in a specific object and hods a list of your own listeners.</li>
+<li>Signal works like a delegate and Events, the difference in use signals are: You have less code to bore you. =)</li>
+<li>The most common way to use this library is with user interface, but can be used to many ways especially in gaming applications.</li>
+</ul>
+
+<p>Ok, Let's see some code!</p>
+
+<h4>
+<a id="how-to-start" class="anchor" href="#how-to-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Start</h4>
+
+<div class="highlight highlight-csharp"><pre><span class="pl-c">//Here the declaration</span>
+<span class="pl-s">public</span> Signal&lt;<span class="pl-st">int</span>&gt; OnTakeDamage = <span class="pl-s">new</span> Signal&lt;<span class="pl-st">int</span>&gt;();</pre></div>
+
+<p>Above is the declaration, very simple. The "Signal" is the class which we will use to bring the signal to life and the type between "&lt;&gt;" is what the signal will push to the listener. 
+"Obs: If you want nothing use Signal.Void class".</p>
+
+<h4>
+<a id="adding-listeners" class="anchor" href="#adding-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding Listeners</h4>
+
+<div class="highlight highlight-csharp"><pre><span class="pl-c">//Add a listener to our signal. </span>
+<span class="pl-c">//The OnHeroTakeDamageHandler is the listener, the function that will be called when the hero take some damage. </span>
+OnTakeDamage.Add(OnHeroTakeDamageHandler);
+
+<span class="pl-c">//OR</span>
+
+<span class="pl-c">// that handler only be called once.</span>
+OnTakeDamage.AddOnce(OnHeroTakeDamageHandler);
+</pre></div>
+
+<p>For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and will be called every time the Signal dispatch. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the system call once, ie, will be removed automatically.</p>
+
+<h4>
+<a id="remove-listeners" class="anchor" href="#remove-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove Listeners</h4>
+
+<h4>
+<a id="dispatching" class="anchor" href="#dispatching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dispatching</h4>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Signals C# maintained by <a href="https://github.com/mendesbarreto">mendesbarreto</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
