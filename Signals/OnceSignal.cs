@@ -34,7 +34,7 @@ namespace Signals
 					    slotsToProcess.head.Execute1(valueObjects);
                     else
                     {
-                        if (typeof(T) == typeof(NullSignal))
+                        if (typeof(T) == typeof(empty))
                             slotsToProcess.head.Execute0();
                         else
                             throw new Exception("The function is wainting some object as parameter of type: " + typeof(T).ToString() );
@@ -50,7 +50,12 @@ namespace Signals
             get { return m_slots.Length();  }
         }
 
-        public ISlot<T> AddOnce( Delegate listener)
+        public ISlot<T> AddOnce(OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+        {
+            return RegisterListener(listener, true);
+        }
+
+        public ISlot<T> AddOnce(OnceSignal<T>.SignalDelegateArgTemplateCallback0 listener )
         {
             return RegisterListener(listener, true);
         }
@@ -84,8 +89,18 @@ namespace Signals
 			return false;
 		}
 
+        public ISlot<T> Remove( OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener)
+        {
+            ISlot<T> slot = m_slots.Find(listener);
 
-        public ISlot<T> Remove( Delegate listener)
+            if (slot == null) return null;
+
+            m_slots = m_slots.FilterNot(listener);
+
+            return slot;
+        }
+
+        public ISlot<T> Remove( OnceSignal<T>.SignalDelegateArgTemplateCallback0 listener)
         {
             ISlot<T> slot = m_slots.Find(listener);
 

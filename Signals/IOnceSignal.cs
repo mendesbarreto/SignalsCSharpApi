@@ -21,7 +21,17 @@ namespace Signals
         /// </summary>
         /// 
         /// <returns>ISlot which contains the Function passed as the parameter </returns>
-        ISlot<T> AddOnce( Delegate listener );
+        ISlot<T> AddOnce(OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener);
+
+
+        /// <summary>
+        /// Subscribes a one-time listener for this signal.
+        /// The signal will remove the listener automatically the first time it is called,
+        /// after the dispatch to all listeners is complete.
+        /// </summary>
+        /// 
+        /// <returns>ISlot which contains the Function passed as the parameter </returns>
+        ISlot<T> AddOnce(OnceSignal<T>.SignalDelegateArgTemplateCallback0 listener);
 
         /// <summary>
         /// Dispatches some object to listeners.
@@ -37,7 +47,10 @@ namespace Signals
         /// 
         /// <param name="listener"> The listener associated with the slot </param>
         /// <returns>ISlot which contains the Function passed as the parameter </returns>
-        ISlot<T> Remove( Delegate listener);
+        ISlot<T> Remove( OnceSignal<T>.SignalDelegateArgTemplateCallback1 listener);
+
+
+        ISlot<T> Remove(OnceSignal<T>.SignalDelegateArgTemplateCallback0 listener);
 
         /// </summary>
         /// Unsubscribes all listeners from the signal.

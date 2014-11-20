@@ -122,7 +122,10 @@ namespace Signals
 
         public void Remove()
 		{
-			m_signal.Remove(m_listener);
+            if (m_listener is OnceSignal<T>.SignalDelegateArgTemplateCallback0)
+                m_signal.Remove(m_listener as OnceSignal<T>.SignalDelegateArgTemplateCallback0);
+            else
+                m_signal.Remove(m_listener as OnceSignal<T>.SignalDelegateArgTemplateCallback1);
 		}
 
 

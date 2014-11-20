@@ -42,7 +42,7 @@
     <Compile Include="Signals\IOnceSignal.cs" />
     <Compile Include="Signals\ISignal.cs" />
     <Compile Include="Signals\ISlot.cs" />
-    <Compile Include="Signals\NullSignal.cs" />
+    <Compile Include="Signals\empty.cs" />
     <Compile Include="Signals\OnceSignal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signals\Signal.cs" />
