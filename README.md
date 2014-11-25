@@ -24,14 +24,15 @@ TODO: INSTALL TUTORIAL
 
 How to Start
 ------
-
+```csharp
 //Here the declaration
 public Signal<int> OnTakeDamage = new Signal<int>();
+```
 Above is the declaration, very simple. The "Signal" is the class which we will use to bring the signal to life and the type between "<>" is what the signal will push to the listener. "Obs: If you want nothing use Signal.Void class".
 
 Adding Listeners
 ------
-
+```csharp
 //Add a listener to our signal. 
 //The OnHeroTakeDamageHandler is the listener, the function that will be called when the hero take some damage. 
 OnTakeDamage.Add(OnHeroTakeDamageHandler);
@@ -40,11 +41,12 @@ OnTakeDamage.Add(OnHeroTakeDamageHandler);
 
 // that handler only be called once.
 OnTakeDamage.AddOnce(OnHeroTakeDamageHandler);
+```
 For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and will be called every time the Signal dispatch. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the system call once, ie, will be removed automatically.
 
 Remove Listeners
 ------
-
+```csharp
 //Remove a specific listener 
 OnTakeDamage.Remove(OnHeroTakeDamageHandler);
 
@@ -52,8 +54,15 @@ OnTakeDamage.Remove(OnHeroTakeDamageHandler);
 
 //Remove All listeners
 OnTakeDamage.RemoveAll()
+```
+
 Dispatching
+------
+
+```csharp
 OnTakeDamage.Dispatch(10);
+```
+
 To dispatch the signal to the listeners is simple, use the "Dispatch()" method, and pass between "()" the value of type specified in the signal declaration, in this case "int".
 
 Support or Contact
