@@ -1,10 +1,6 @@
 SignalsCSharpAPI
 ================
 
-BUILDING PAGE NOT READ!!!
-
-Welcome to SignalsCSharpApi page
-=========
 
 What is it?
 ------
