@@ -34,7 +34,7 @@ Adding Listeners
 ------
 ```csharp
 //Add a listener to our signal. 
-//The OnHeroTakeDamageHandler is the listener, the function that will be called when the hero take some damage. 
+//The OnHeroTakeDamageHandler is the listener, the method that will be called when the hero take some damage. 
 OnTakeDamage.Add(OnHeroTakeDamageHandler);
 
 //OR
