@@ -67,7 +67,7 @@ To dispatch the signal to the listeners is simple, use the "Dispatch()" method, 
 
 Support or Contact
 ------
-Having trouble with Pages? Check out the documentation at https://help.github.com/pages or contact mendes-barreto@live.com and we’ll help you sort it out.
+Having trouble with Pages? Check out the documentation at https://Come_soon.com or contact mendes-barreto@live.com and we’ll help you sort it out.
 
 References and Information
 ------
