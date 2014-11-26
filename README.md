@@ -72,7 +72,7 @@ Having trouble with Pages? Check out the documentation at https://Come_soon.com 
 References and Information
 ------
 
-[Pattern Observer](http://en.wikipedia.org/wiki/Observer_pattern "Pattern Observer")
-[Signals with Boost C++](http://www.boost.org/doc/libs/1_51_0/doc/html/signals.html "Boost Signals")
-[Signals & Slots QT](http://qt-project.org/doc/qt-4.8/signalsandslots.html "QT")
+* [Pattern Observer](http://en.wikipedia.org/wiki/Observer_pattern "Pattern Observer")
+* [Signals with Boost C++](http://www.boost.org/doc/libs/1_51_0/doc/html/signals.html "Boost Signals")
+* [Signals & Slots QT](http://qt-project.org/doc/qt-4.8/signalsandslots.html "QT")
 
