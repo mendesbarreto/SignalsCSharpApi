@@ -28,21 +28,21 @@ How to Start
 //Here the declaration
 public Signal<int> OnTakeDamage = new Signal<int>();
 ```
-Above is the declaration, very simple. The "Signal" is the class which we will use to bring the signal to life and the type between "<>" is what the signal will push to the listener. "Obs: If you want nothing use Signal.Void class".
+Above is the declaration. The "Signal" is the class which we will use to bring the signal to life and the type between "<>" is what the signal will push to the listener. "Obs: If you want nothing use Signal.empty class".
 
 Adding Listeners
 ------
 ```csharp
 //Add a listener to our signal. 
-//The OnHeroTakeDamageHandler is the listener, the method that will be called when the hero take some damage. 
+//The OnHeroTakeDamageHandler is the listener, this method will be called when the hero take some damage.
 OnTakeDamage.Add(OnHeroTakeDamageHandler);
 
 //OR
 
-// that handler only be called once.
+// that handler will be called once.
 OnTakeDamage.AddOnce(OnHeroTakeDamageHandler);
 ```
-For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and will be called every time the Signal dispatch. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the system call once, ie, will be removed automatically.
+For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and each time that signal was dispatched the method will be called. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the signal call the method only once, ie, after the first call the listener will be removed automatically.
 
 Remove Listeners
 ------
