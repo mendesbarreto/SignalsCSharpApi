@@ -5,15 +5,19 @@ SignalsCSharpAPI
 What is it?
 ------
 
-SignalsCSharpApi is an open-source C# library witch simplify the messaging between objects and makes it easy to implement the Observer pattern while avoiding boilerplate your code. This library could be used in place of delegate and C# events.
+Signals Api is an open-source C# library which simplifies the messaging between objects and makes easy the implementation of Observer pattern, while avoiding boilerplate your code.
+This library could be used in place of delegate and C# events.
+The main idea behind this library is make you code clear and easy to add and remove "listeners" of a specific object event.
+Before we start, you need to know some concepts such as:
 
-The main idea behind this library is make you code clear and easy to add and remove "listeners" of a object event.
+* Listener is a method which will be called after the signal was dispatched.
 
-Before we start, I need you have some concepts in your mind such as:
+* Signal is a dispatcher of a single event in a specific object and has and holds a list of your own listeners which can be removed or added as needed by the programmer.
 
-Signal is a dispatcher of a single event in a specific object and hods a list of your own listeners.
-Signal works like a delegate and Events, the difference in use signals are: You have less code to bore you. =)
-The most common way to use this library is with user interface, but can be used to many ways especially in gaming applications.
+* Signal works like a delegate and Events, the difference in use signals are: You have less code to bore you and The workflow is simpler than "delegates". =)
+
+* The most common way to use this library is with user interface, but can be used to many ways especially in gaming applications. 
+
 Ok, Let's see some code!
 
 TODO: INSTALL TUTORIAL
