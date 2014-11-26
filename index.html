@@ -31,57 +31,49 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a id="building-page-not-read" class="anchor" href="#building-page-not-read" aria-hidden="true"><span class="octicon octicon-link"></span></a>BUILDING PAGE NOT READ!!!</h1>
+        <h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h2>
 
-<h3>
-<a id="welcome-to-signalscsharpapi-page" class="anchor" href="#welcome-to-signalscsharpapi-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to SignalsCSharpApi page</h3>
-
-<h4>
-<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h4>
-
-<p>SignalsCSharpApi is an open-source C# library witch simplify the messaging between objects and makes it easy to implement the Observer pattern while avoiding boilerplate your code. This library could be used in place of delegate and C# events.</p>
-
-<p>The main idea behind this library is make you code clear and easy to add and remove "listeners" of a object event.</p>
-
-<p>Before we start, I need you have some concepts in your mind such as:</p>
+<p>Signals Api is an open-source C# library which simplifies the messaging between objects and makes easy the implementation of Observer pattern, while avoiding boilerplate your code.
+This library could be used in place of delegate and C# events.
+The main idea behind this library is make you code clear and easy to add and remove "listeners" of a specific object event.
+Before we start, you need to know some concepts such as:</p>
 
 <ul>
-<li>Signal is a dispatcher of a single event in a specific object and hods a list of your own listeners.</li>
-<li>Signal works like a delegate and Events, the difference in use signals are: You have less code to bore you. =)</li>
-<li>The most common way to use this library is with user interface, but can be used to many ways especially in gaming applications.</li>
+<li><p>Listener is a method which will be called after the signal was dispatched.</p></li>
+<li><p>Signal is a dispatcher of a single event in a specific object and has and holds a list of your own listeners which can be removed or added as needed by the programmer.</p></li>
+<li><p>Signal works like a delegate and Events, the difference in use signals are: You have less code to bore you and The workflow is simpler than "delegates". =)</p></li>
+<li><p>The most common way to use this library is with user interface, but can be used to many ways especially in gaming applications. </p></li>
 </ul>
 
 <p>Ok, Let's see some code!</p>
 
-<p>TODO: TUTORIAL coming soon!!!!</p>
+<p>TODO: INSTALL TUTORIAL</p>
 
-<h4>
-<a id="how-to-start" class="anchor" href="#how-to-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Start</h4>
+<h2>
+<a id="how-to-start" class="anchor" href="#how-to-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Start</h2>
 
 <div class="highlight highlight-csharp"><pre><span class="pl-c">//Here the declaration</span>
 <span class="pl-s">public</span> Signal&lt;<span class="pl-st">int</span>&gt; OnTakeDamage = <span class="pl-s">new</span> Signal&lt;<span class="pl-st">int</span>&gt;();</pre></div>
 
-<p>Above is the declaration, very simple. The "Signal" is the class which we will use to bring the signal to life and the type between "&lt;&gt;" is what the signal will push to the listener. 
-"Obs: If you want nothing use Signal.Void class".</p>
+<p>Above is the declaration. The "Signal" is the class which we will use to bring the signal to life and the type between "&lt;&gt;" is what the signal will push to the listener. "Obs: If you want nothing use Signal.empty class".</p>
 
-<h4>
-<a id="adding-listeners" class="anchor" href="#adding-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding Listeners</h4>
+<h2>
+<a id="adding-listeners" class="anchor" href="#adding-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding Listeners</h2>
 
 <div class="highlight highlight-csharp"><pre><span class="pl-c">//Add a listener to our signal. </span>
-<span class="pl-c">//The OnHeroTakeDamageHandler is the listener, the function that will be called when the hero take some damage. </span>
+<span class="pl-c">//The OnHeroTakeDamageHandler is the listener, this method will be called when the hero take some damage.</span>
 OnTakeDamage.Add(OnHeroTakeDamageHandler);
 
 <span class="pl-c">//OR</span>
 
-<span class="pl-c">// that handler only be called once.</span>
-OnTakeDamage.AddOnce(OnHeroTakeDamageHandler);
-</pre></div>
+<span class="pl-c">// that handler will be called once.</span>
+OnTakeDamage.AddOnce(OnHeroTakeDamageHandler);</pre></div>
 
-<p>For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and will be called every time the Signal dispatch. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the system call once, ie, will be removed automatically.</p>
+<p>For add listeners we have two forms, the first one is the method "Add()", when you use this method the system will register the listener in the Signal and each time that signal was dispatched the method will be called. The second one is the method "AddOnce()" it work in the same way that the "Add()" but the signal call the method only once, ie, after the first call the listener will be removed automatically.</p>
 
-<h4>
-<a id="remove-listeners" class="anchor" href="#remove-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove Listeners</h4>
+<h2>
+<a id="remove-listeners" class="anchor" href="#remove-listeners" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove Listeners</h2>
 
 <div class="highlight highlight-csharp"><pre><span class="pl-c">//Remove a specific listener </span>
 OnTakeDamage.Remove(OnHeroTakeDamageHandler);
@@ -91,17 +83,26 @@ OnTakeDamage.Remove(OnHeroTakeDamageHandler);
 <span class="pl-c">//Remove All listeners</span>
 OnTakeDamage.RemoveAll()</pre></div>
 
-<h4>
-<a id="dispatching" class="anchor" href="#dispatching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dispatching</h4>
+<h2>
+<a id="dispatching" class="anchor" href="#dispatching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dispatching</h2>
 
 <div class="highlight highlight-csharp"><pre>OnTakeDamage.Dispatch(<span class="pl-c1">10</span>);</pre></div>
 
 <p>To dispatch the signal to the listeners is simple, use the "Dispatch()" method, and pass between "()" the value of type specified in the signal declaration, in this case "int".</p>
 
-<h3>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
+<h2>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h2>
 
-<p>Having trouble with Signals? Check out the documentation at "https://comingsoon" or contact <a href="mailto:mendes-barreto@live.com">mendes-barreto@live.com</a> and we’ll help you sort it out.</p>
+<p>Having trouble with Pages? Check out the documentation at https://Come_soon.com or contact <a href="mailto:mendes-barreto@live.com">mendes-barreto@live.com</a> and we’ll help you sort it out.</p>
+
+<h2>
+<a id="references-and-information" class="anchor" href="#references-and-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>References and Information</h2>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Observer_pattern" title="Pattern Observer">Pattern Observer</a></li>
+<li><a href="http://www.boost.org/doc/libs/1_51_0/doc/html/signals.html" title="Boost Signals">Signals with Boost C++</a></li>
+<li><a href="http://qt-project.org/doc/qt-4.8/signalsandslots.html" title="QT">Signals &amp; Slots QT</a></li>
+</ul>
       </section>
     </div>
 
