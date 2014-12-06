@@ -1,0 +1,5 @@
+E:\GitHub\SignalsCSharpApi\bin\Debug\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\bin\Debug\SignalsCSharp.pdb
+E:\GitHub\SignalsCSharpApi\obj\Debug\SignalsCSharp.csprojResolveAssemblyReference.cache
+E:\GitHub\SignalsCSharpApi\obj\Debug\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\obj\Debug\SignalsCSharp.pdb

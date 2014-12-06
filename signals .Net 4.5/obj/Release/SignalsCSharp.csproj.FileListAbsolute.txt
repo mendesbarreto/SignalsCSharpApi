@@ -1,0 +1,4 @@
+E:\GitHub\SignalsCSharpApi\bin\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\bin\Release\SignalsCSharp.pdb
+E:\GitHub\SignalsCSharpApi\obj\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\obj\Release\SignalsCSharp.pdb

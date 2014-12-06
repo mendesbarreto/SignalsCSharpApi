@@ -1,0 +1,4 @@
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5.1 Universal Apps\bin\Release\SignalsCSharp.NET_4._5_Universal_Apps.dll
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5.1 Universal Apps\bin\Release\SignalsCSharp.NET_4._5_Universal_Apps.pdb
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5.1 Universal Apps\obj\Release\SignalsCSharp.NET_4._5_Universal_Apps.dll
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5.1 Universal Apps\obj\Release\SignalsCSharp.NET_4._5_Universal_Apps.pdb

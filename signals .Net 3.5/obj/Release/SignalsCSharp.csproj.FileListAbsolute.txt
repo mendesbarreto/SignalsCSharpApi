@@ -1,0 +1,9 @@
+E:\GitHub\SignalsCSharpApi\bin\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\bin\Release\SignalsCSharp.pdb
+E:\GitHub\SignalsCSharpApi\obj\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\obj\Release\SignalsCSharp.pdb
+E:\GitHub\SignalsCSharpApi\signals .Net 3.5\bin\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\signals .Net 3.5\bin\Release\SignalsCSharp.pdb
+E:\GitHub\SignalsCSharpApi\signals .Net 3.5\obj\Release\SignalsCSharp.csprojResolveAssemblyReference.cache
+E:\GitHub\SignalsCSharpApi\signals .Net 3.5\obj\Release\SignalsCSharp.dll
+E:\GitHub\SignalsCSharpApi\signals .Net 3.5\obj\Release\SignalsCSharp.pdb

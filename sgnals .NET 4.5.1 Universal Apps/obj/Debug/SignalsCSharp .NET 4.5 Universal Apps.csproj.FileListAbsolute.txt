@@ -1,0 +1,5 @@
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5 Universal Apps\SignalsCSharp .NET 4.5 Universal Apps\bin\Debug\SignalsCSharp.NET_4._5_Universal_Apps.dll
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5 Universal Apps\SignalsCSharp .NET 4.5 Universal Apps\bin\Debug\SignalsCSharp.NET_4._5_Universal_Apps.pdb
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5 Universal Apps\SignalsCSharp .NET 4.5 Universal Apps\obj\Debug\SignalsCSharp .NET 4.5 Universal Apps.csprojResolveAssemblyReference.cache
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5 Universal Apps\SignalsCSharp .NET 4.5 Universal Apps\obj\Debug\SignalsCSharp.NET_4._5_Universal_Apps.dll
+E:\GitHub\SignalsCSharpApi\sgnals .NET 4.5 Universal Apps\SignalsCSharp .NET 4.5 Universal Apps\obj\Debug\SignalsCSharp.NET_4._5_Universal_Apps.pdb
